@@ -1,0 +1,41 @@
+/* App Layout */
+.app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: #f1f3f6;
+}
+
+/* Main Content Area - Adjust based on category bar */
+.main-content {
+  flex: 1;
+  margin-top: 56px; /* Only main navbar height */
+  padding-top: 20px;
+  padding-bottom: 20px;
+  width: 100%;
+}
+
+/* When category bar is visible (on home page) */
+.main-content.with-category-bar {
+  margin-top: 106px; /* 56px (navbar) + 50px (category bar) */
+}
+
+@media (max-width: 768px) {
+  .main-content {
+    margin-top: 50px;
+  }
+
+  .main-content.with-category-bar {
+    margin-top: 95px; /* 50px + 45px */
+  }
+}
+
+@media (max-width: 480px) {
+  .main-content {
+    margin-top: 46px;
+  }
+
+  .main-content.with-category-bar {
+    margin-top: 86px; /* 46px + 40px */
+  }
+}
